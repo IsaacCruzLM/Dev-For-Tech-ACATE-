@@ -32,7 +32,6 @@ const Shop = () => {
   const dispatch = useDispatch();
 
   const addCartItemShop = (item: IProduct) => {
-    console.log(item);
     dispatch(addNewItem(item));
   }
 

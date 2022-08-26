@@ -51,26 +51,29 @@ const Cart = () => {
         >
           <TouchableOpacity
             onPress={ () => setShowCartModal(!showCartModal)}
+            style={styles.closeModal}
           >
-            <AntDesign
-              name="close"
-              size={24}
-              color="black"
-            />
-            <Text>Fechar</Text>
+            <View style={styles.closeModalContent}>
+              <AntDesign
+                name="close"
+                size={24}
+                color="black"
+              />
+              <Text>Fechar</Text>
+            </View>
           </TouchableOpacity>
           
           {cart.length > 0 ? (
-            <View>
-            { cart.map( (item, index) => (
-              <View>
-                <Text>{item.name}</Text>
-                <Text onPress={() => removeItemInCart(index)}>X</Text>
-              </View>
-            ))}
+            <View style={styles.itensContainer}>
+              { cart.map( (item, index) => (
+                <View style={styles.itemCard}>
+                  <Text>{item.name}</Text>
+                  <Text style={styles.itemRemove} onPress={() => removeItemInCart(index)}>X</Text>
+                </View>
+              ))}
             </View>
           ) : (
-            <View>
+            <View style={styles.itensContainer}>
               <Text>Adicione itens ao seu carrinho</Text>
             </View>
           )}

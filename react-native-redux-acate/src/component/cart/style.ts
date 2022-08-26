@@ -14,8 +14,8 @@ export default StyleSheet.create({
   modalBody: {
     width: '100%',
     height: '100%',
-    justifyContent: 'center',
     alignItems: 'center',
+    padding: 18,
   },
   contentCart: {
     backgroundColor: '#000540',
@@ -27,5 +27,37 @@ export default StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
     fontSize: 15
+  },
+  itemCard: {
+    width: 250,
+    flexDirection: 'row',
+    backgroundColor: '#ededeb',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 4,
+    marginVertical: 5,
+    borderColor: "#000",
+    borderWidth: 0.5,
+    alignItems: "center",
+    justifyContent: "space-between"
+  },
+  itemRemove: {
+    backgroundColor: "red",
+    color: "#FFF",
+    paddingHorizontal: 4,
+    paddingVertical: 2,
+    borderRadius: 4,
+  },
+  closeModal: {
+    width: "100%",
+    alignItems: "flex-end",
+  },
+  closeModalContent: {
+    alignItems: "center",
+  },
+  itensContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
   }
 })

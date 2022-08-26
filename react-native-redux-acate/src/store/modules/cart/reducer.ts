@@ -21,7 +21,6 @@ const CartData = createSlice({
       state.cart = [...state.cart, action.payload]
     },
     removeCartItem: (state: ICart, action: PayloadAction<number>) => {
-      console.log(action);
       state.cart.splice(action.payload, 1)
     }
   }
